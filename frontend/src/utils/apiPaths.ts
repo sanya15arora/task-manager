@@ -16,6 +16,6 @@ export const API_PATHS = {
         DELETE: (id: string) => `/api/v1/task/delete/${id}`,
     },
     IMAGE: {
-        UPLOAD: "/api/v1/auth/upload-image",
+        UPLOAD_IMAGE: "/api/v1/auth/upload-image",
     }
 };

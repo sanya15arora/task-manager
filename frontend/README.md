@@ -97,7 +97,7 @@ Example API Routes:
 Create a `.env` file in the root directory and add:
 
 ```
-VITE_API_BASE_URL=http://localhost:8000/api/auth
+VITE_API_BASE_URL=http://localhost:8000/api/v1/auth
 ```
 
 ---

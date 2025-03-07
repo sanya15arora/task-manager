@@ -45,10 +45,10 @@ const SignUp: FC = () => {
 
         try {
 
-            if (profilePic) {
-                const imgUploadRes = await uploadImage(profilePic)
-                profileImageUrl = imgUploadRes.imageUrl || '';
-            }
+            // if (profilePic) {
+            //     const imgUploadRes = await uploadImage(profilePic)
+            //     profileImageUrl = imgUploadRes.imageUrl || '';
+            // }
 
             const response = await axiosInstance.post(API_PATHS.AUTH.REGISTER, {
                 fullName,
@@ -82,7 +82,7 @@ const SignUp: FC = () => {
                 </p>
 
                 <form onSubmit={handleSignUp}>
-                    <ProfilePicSelector image={profilePic} setImage={setProfilePic} />
+                    {/* <ProfilePicSelector image={profilePic} setImage={setProfilePic} /> */}
 
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                         <Input

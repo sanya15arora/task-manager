@@ -3,16 +3,16 @@ import { Link, useNavigate } from 'react-router-dom';
 import AuthLayout from '../../components/layouts/AuthLayout';
 import Input from '../../components/Inputs/Input';
 import { validateEmail } from '../../utils/helper';
-import ProfilePicSelector from '../../components/Inputs/ProfilePicSelector';
+// import ProfilePicSelector from '../../components/Inputs/ProfilePicSelector';
 import axiosInstance from '../../utils/axiosInstance';
 import { API_PATHS } from '../../utils/apiPaths';
 import { isAxiosError } from 'axios';
 import { UserContext } from '../../context/UserContext';
-import uploadImage from '../../utils/uploadImage';
+// import uploadImage from '../../utils/uploadImage';
 
 const SignUp: FC = () => {
 
-    const [profilePic, setProfilePic] = useState<File | null>(null);
+    // const [profilePic, setProfilePic] = useState<File | null>(null);
     const [fullName, setFullName] = useState<string>('');
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');

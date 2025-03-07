@@ -24,7 +24,7 @@ This is the **frontend** for the Task Manager application, built using **React, 
 
 ### 1️⃣ Clone the Repository
 ```sh
-git clone https://github.com/your-repo/task-manager-frontend.git
+git clone https://github.com/sanya15arora/task-manager.git
 cd frontend
 ```
 
@@ -97,7 +97,7 @@ Example API Routes:
 Create a `.env` file in the root directory and add:
 
 ```
-VITE_API_BASE_URL=http://localhost:8000/api  # Change according to backend
+VITE_API_BASE_URL=http://localhost:8000/api/auth
 ```
 
 ---

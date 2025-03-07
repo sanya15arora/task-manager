@@ -1,4 +1,5 @@
-export const BASE_URL = "https://task-manager-azure-five.vercel.app";
+export const BASE_URL = import.meta.env.BASE_URL || "http://localhost:8000"
+
 
 export const API_PATHS = {
     AUTH: {

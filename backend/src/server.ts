@@ -27,6 +27,9 @@ app.use(express.json());
 // Connect to Database and start server
 connectDB();
 
+app.use("/api/test", (req, res) => {
+    res.send("Hello Test");
+});
 // Routes
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/task", taskRoutes);

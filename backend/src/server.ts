@@ -19,7 +19,9 @@ app.use(
         origin: "https://task-manage-three.vercel.app",
         credentials: true,
         methods: ["GET", "POST", "PUT", "DELETE"],
-        allowedHeaders: ["Origin, X-Requested-With, Content-Type, Accept, Authorization"]
+        // allowedHeaders: ["Content-Type", "Authorization"],
+        allowedHeaders: "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+
     })
 );
 app.use(express.json());

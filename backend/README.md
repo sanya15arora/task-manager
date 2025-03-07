@@ -24,7 +24,7 @@ This is the **backend** for the Task Manager application, built using **Node.js,
 
 ### 1️⃣ Clone the Repository
 ```sh
-git clone https://github.com/your-repo/task-manager-backend.git
+git clone https://github.com/sanya15arora/task-manager.git
 cd backend
 ```
 
@@ -42,6 +42,7 @@ Create a `.env` file in the root directory and add:
 PORT=8000
 MONGO_URI=mongodb://localhost:27017/task-manager
 JWT_SECRET=your_secret_key
+FRONTEND_URL=http://localhost:5173
 ```
 
 ### 4️⃣ Start Development Server

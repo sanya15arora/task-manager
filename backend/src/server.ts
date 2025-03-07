@@ -27,9 +27,7 @@ app.use(express.json());
 // Connect to Database and start server
 connectDB();
 
-app.use("/", (req, res) => {
-    res.send("Backend is working");
-});
+
 // Routes
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/task", taskRoutes);

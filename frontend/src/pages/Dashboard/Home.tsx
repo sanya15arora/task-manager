@@ -70,13 +70,13 @@ const Home = () => {
             color="bg-green-500"
           />
         </div>
-        <div className="mt-6">
+       { dashboardData?.tasks && dashboardData.tasks.length > 0 && <div className="mt-6">
           <TaskList
             tasks={dashboardData?.tasks || []}
             onSeeMore={() => navigate("/tasks")}
           />
-
         </div>
+}
       </div>
     </DashboardLayout>
   );

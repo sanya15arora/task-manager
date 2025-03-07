@@ -12,6 +12,8 @@ interface TaskListCardProps {
 }
 
 const TaskOverview: FC<TaskListCardProps> = ({ taskList, onAddTask, onDelete, onEdit }) => {
+
+
     return (
         <div className="card">
             <div className="grid grid-cols-1 gap-8">
@@ -19,25 +21,25 @@ const TaskOverview: FC<TaskListCardProps> = ({ taskList, onAddTask, onDelete, on
                     <LuPlus className="text-xl" />
                     Add Task
                 </button>
-                <div className="grid grid-cols-1">
-                    <h5 className="text-xl font-semibold">Task List</h5>
-                    <div className='grid grid-cols-1 gap-4'>
-                        {taskList.map((task) => {
-                            return (
-                                <TaskInfoCard
-                                    key={task._id}
-                                    title={task.title}
-                                    description={task.description}
-                                    status={task.status}
-                                    date={moment(task.createdAt).format("Do MMM YYYY")}
-                                    onDelete={() => onDelete(task?._id || "")}
-                                    onEdit={() => onEdit(task)}
-                                />
-                            );
-                        })}
-                    </div>
-                </div>
-
+                {taskList.length !== 0 && (
+                    <div className="grid grid-cols-1">
+                        <h5 className="text-xl font-semibold">Task List</h5>
+                        <div className='grid grid-cols-1 gap-4'>
+                            {taskList.map((task) => {
+                                return (
+                                    <TaskInfoCard
+                                        key={task._id}
+                                        title={task.title}
+                                        description={task.description}
+                                        status={task.status}
+                                        date={moment(task.createdAt).format("Do MMM YYYY")}
+                                        onDelete={() => onDelete(task?._id || "")}
+                                        onEdit={() => onEdit(task)}
+                                    />
+                                );
+                            })}
+                        </div>
+                    </div>)}
             </div>
         </div>
     )

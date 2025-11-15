@@ -29,6 +29,9 @@ connectDB();
 
 
 // Routes
+app.get('/', (req, res) => {
+    res.send('Task manager Server is running!')
+})
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/task", taskRoutes);
 app.use("/api/v1/dashboard", dashboardRoutes);
